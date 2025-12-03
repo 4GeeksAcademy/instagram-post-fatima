@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/98067b1348.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
     <title>Instagram Post</title>
   </head>
 
@@ -14,61 +16,126 @@
     </header>
 
     <section class="content">
-      <section class="post">
+      <!-- ---------------------------------------------- P O S T  1 -->
+      <section class="post" aria-label="Post 1">
         <div class="post__heading">
-          <p class="post__title">Caught Pretending to Work</p>
+          <p class="post__title">Today's Mood: Unbothered</p>
           <p class="post__counter">1/4</p>
         </div>
-        <div class="post__media">
-          <img class="post__img" src="./img/catherine-heath-i4W8OINLI_I-unsplash.webp" alt="">
-        </div>
+
+        <div class="post__carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev" title="Previous picture"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-button next" data-carousel-button="next" title="Next picture"><i class="fa-solid fa-chevron-right"></i></button>     
+          <ul data-slides>
+            <li class="slide" data-active="true">
+              <img src="./img/shawn-rain-ChDKDFRS9Lg-unsplash.webp" alt="orange cat staring at a screen">
+            </li>
+            <li class="slide" data-active="false">
+              <img src="./img/shawn-rain-fcSL-xSwhT4-unsplash.webp" alt="">
+            </li>
+            <li class="slide">
+              <img src="./img/shawn-rain-wFihnrQY9a4-unsplash.webp" alt="">
+            </li>
+          </ul>
           <p class="post__img-credits1">Photo by <a href="https://unsplash.com/@catherineheath?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Catherine Heath</a> on <a href="https://unsplash.com/photos/shallow-focus-photo-of-orange-cat-near-laptop-computer-i4W8OINLI_I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a></p>
+        </div>
         <div class="post__footer">
-          <p class="post__caption">Trying to get some work done, but the more I stare at the screen, the more I realize a nap would solve all my problems. <span class="hashtag">#CatLife #WorkFromBed #Relatable</span></p>
+          <div class="post__likes">
+                    <button class="likes-button" title="Like"><i class="fa-regular fa-heart"></i></button>
+                    <p class="likes-counter">0</p>
+                    <p class="likes-text">likes</p>
+          </div>
+          <p class="post__caption">This chair was empty for two seconds and suddenly became a full-time throne. I guess I'm standing now. <span class="hashtag">#Catlife #ChairBoss #GingerQueen</span></p>
         </div>
       </section>
 
-      <section class="post">
+      <!-- ---------------------------------------------- P O S T  2 -->
+      <section class="post" aria-label="Post 2">
         <div class="post__heading">
           <p class="post__title">Not My First Rodeo</p>
           <p class="post__counter">2/4</p>
         </div>
-        <div class="post__media">
-          <img class="post__img" src="./img/leydi-paola-mora-torres-7iUPXpL_714-unsplash.webp" alt="">
+        <div class="post__carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev" title="Previous picture"><i class="fa-solid fa-chevron-left style-two"></i></button>
+          <button class="carousel-button next" data-carousel-button="next" title="Next picture"><i class="fa-solid fa-chevron-right style-two"></i></button>
+            <ul data-slides>
+              <li class="slide" data-active>
+                <img src="./img/leydi-paola-mora-torres-7iUPXpL_714-unsplash.webp" alt="">
+              </li>
+              <li class="slide">
+                <img src="./img/leydi-paola-mora-torres-CrC3TDk-zzE-unsplash.webp" alt="">
+              </li>
+              <li class="slide">
+                <img src="./img/leydi-paola-mora-torres-oENlRRllTg0-unsplash.webp" alt="">
+              </li>
+            </ul>
+          <p class="post__img-credits2">Photo by <a href="https://unsplash.com/@paolamorat_1111?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Leydi Paola Mora Torres</a> on <a href="https://unsplash.com/photos/a-fluffy-cat-wearing-a-cowboy-hat-7iUPXpL_714?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
         </div>
-          <p class="post__img-credits1">Photo by <a href="https://unsplash.com/@paolamorat_1111?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Leydi Paola Mora Torres</a> on <a href="https://unsplash.com/photos/a-fluffy-cat-wearing-a-cowboy-hat-7iUPXpL_714?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
             </p>
         <div class="post__footer">
+          <div class="post__likes">
+                    <button class="likes-button" title="Like"><i class="fa-regular fa-heart"></i></button>
+                    <p class="likes-counter">0</p>
+                    <p class="likes-text">likes</p>
+          </div>
           <p class="post__caption">Keeping an eye on the horizon like something important is happening… when in reality I'm waiting for dinner. <span class="hashtag">#CowboyLife #CatEnergy #SheriffOnDuty</span></p>
         </div>
       </section>
 
-      <section class="post">
+      <!-- ---------------------------------------------- P O S T  3 -->
+      <section class="post" aria-label="Post 3">
         <div class="post__heading">
           <p class="post__title">Cozy Vibes Only</p>
           <p class="post__counter">3/4</p>
         </div>
-        <div class="post__media">
-          <img class="post__img" src="./img/galina-kondratenko-fLmzq3wfDWM-unsplash.webp" alt="">
+        <div class="post__carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev" title="Previous picture"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-button next" data-carousel-button="next" title="Next picture"><i class="fa-solid fa-chevron-right"></i></button>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <img src="./img/galina-kondratenko-fLmzq3wfDWM-unsplash.webp" alt=""></li>
+            <li class="slide">
+              <img src="./img/galina-kondratenko-Qnk9Glq5FsY-unsplash.webp" alt=""></li>
+          </ul>
+          <p class="post__img-credits1">Photo by <a href="https://unsplash.com/@paralisart?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Galina Kondratenko</a> on <a href="https://unsplash.com/photos/a-cat-standing-on-top-of-a-table-next-to-a-book-fLmzq3wfDWM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
         </div>
-          <p class="post__img-credits2">Photo by <a href="https://unsplash.com/@paralisart?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Galina Kondratenko</a> on <a href="https://unsplash.com/photos/a-cat-standing-on-top-of-a-table-next-to-a-book-fLmzq3wfDWM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
             </p>
         <div class="post__footer">
+          <div class="post__likes">
+            <button class="likes-button" title="Like"><i class="fa-regular fa-heart"></i></button>
+            <p class="likes-counter">0</p>
+            <p class="likes-text">likes</p>
+          </div>
           <p class="post__caption">Pretending to admire the decor, but really calculating how dramatic it would be if I pushed this vase. <span class="hashtag">#CatLogic #HomeVibes #CuteButDangerous</span></p>
         </div>
       </section>
 
-      <section class="post">
+      <!-- ---------------------------------------------- P O S T  4 -->
+      <section class="post" aria-label="Post 4">
         <div class="post__heading">
           <p class="post__title">Sunshine & Chaos</p>
           <p class="post__counter">4/4</p>
         </div>
-        <div class="post__media">
-          <img class="post__img" src="./img/skyangel79-zwXAEIo8KRY-unsplash.webp" alt="">
+        <div class="post__carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev" title="Previous picture"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="carousel-button next" data-carousel-button="next" title="Next picture"><i class="fa-solid fa-chevron-right"></i></button>
+            <ul data-slides>
+              <li class="slide" data-active>
+                <img src="./img/skyangel79-zwXAEIo8KRY-unsplash.webp" alt="">
+              </li>
+              <li class="slide">
+                <img src="./img/jacalyn-beales-CKsDMYPDgCs-unsplash.webp" alt="">
+              </li>
+            </ul>
+            <p class="post__img-credits1">Photo by <a href="https://unsplash.com/@skyangel79?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">人约黄昏后</a> on <a href="https://unsplash.com/photos/an-orange-and-white-cat-laying-on-the-ground-zwXAEIo8KRY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
         </div>
-          <p class="post__img-credits2">Photo by <a href="https://unsplash.com/@skyangel79?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">人约黄昏后</a> on <a href="https://unsplash.com/photos/an-orange-and-white-cat-laying-on-the-ground-zwXAEIo8KRY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
             </p>
         <div class="post__footer">
+          <div class="post__likes">
+            <button class="likes-button" title="Like"><i class="fa-regular fa-heart"></i></button>
+            <p class="likes-counter" id="likes-counter__four">0</p>
+            <p class="likes-text">likes</p>
+          </div>
           <p class="post__caption">Just here rolling on the ground like life is a music video and I'm the star no one asked for. <span class="hashtag">#CatDrama #GoldenHourCat #MainCharacterEnergy</span></p>
         </div>
       </section>

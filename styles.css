@@ -108,43 +108,89 @@ h1 {
   color: rgba(0, 0, 0, 0.25);
 }
 
-.post__media {
+.post__carousel {
   width: 700px;
   height: 75%;
-  text-align: right;
-  overflow: hidden;
+  position: relative;
 }
 
-@media only screen and (max-width: 720px) {
-  .post__media {
-    width: 400px;
-    height: 70%;
-  }
+
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 70ms opacity ease-in-out;
+  transition-delay: 70ms;
 }
 
-.post__img {
+.slide > img {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
 }
 
-.post__img-credits1, .post__img-credits2 {
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
   position: absolute;
-  bottom: 17%;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.carousel-button.prev {
+  left: 2%;
+}
+
+.carousel-button.next {
+  right: 2%;
+}
+
+.style-two {
+  color: rgba(0, 0, 0, .5);
+}
+
+@media only screen and (max-width: 720px) {
+  .post__carousel {
+    width: 400px;
+    height: 260px;
+  }
+
+  .carousel-button > i {
+    font-size: .8rem;
+  }
+}
+
+.post__img-credits1,
+.post__img-credits2 {
+  position: absolute;
+  bottom: 5%;
+  z-index: 3;
   right: 2%;
   font-size: .7rem;
-  opacity: 0.1;
+  opacity: .5;
+  color: white;
 }
 
 .post__img-credits2 {
-  color: white;
+  color: black;
   opacity: .3;
 }
 
 @media only screen and (max-width: 720px) {
   .post__img-credits1, .post__img-credits2 {
-    bottom: 22%;
+    bottom: 5%;
     font-size: .6rem;
   }
 }
@@ -152,14 +198,16 @@ h1 {
 
 .post__footer {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
   height: 15%;
   margin: 0 2%;
 }
 
 @media only screen and (max-width: 720px) {
   .post__footer {
-    height: 20%;
+    height: 25%;
+    gap: 5px;
   }
 }
 
@@ -171,4 +219,46 @@ h1 {
 .hashtag {
   color: blue;
   font-weight: bold;
+  cursor: pointer;
+}
+
+
+.post__likes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+
+.likes-button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  
+}
+
+.fa-heart {
+  font-size: 1.3rem;
+}
+
+.likes-counter, .likes-text {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 720px) {
+  .post__likes {
+    margin-top: 12px;
+    
+  }
+  .fa-heart {
+    font-size: 1.1rem;
+  }
+  .likes-counter, .likes-text {
+    font-size: .9rem;
+  }
+
+  .post__caption {
+    line-height: 1.1rem;
+  }
 }
